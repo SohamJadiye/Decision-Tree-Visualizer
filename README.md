@@ -11,4 +11,8 @@ Flask app where you can input hyperparameters of decision tree such as:
 Visualize the decision tree using contour plot and scatter plot.
 Visualize the decision Tree.
 
+![image](https://github.com/SohamJadiye/Decision-Tree-Visualizer/assets/114732272/dc2575db-91ed-44d8-8ab1-6ed5efaacc4c)
+![image](https://github.com/SohamJadiye/Decision-Tree-Visualizer/assets/114732272/c8b7b0d6-a244-4758-b705-6f61b02bb237)
+
+
 ![image](https://github.com/SohamJadiye/Decision-Tree-Visualizer/assets/114732272/9e1bbc06-a9eb-4627-be5e-732044955fd4)
