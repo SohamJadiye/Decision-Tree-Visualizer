@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- <link  href="{{ url_for('static', filename='css/design.css')}}"> -->
+<style>
+        input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+    font-weight: 400;
+  }
+  h1{
+    color: black;
+    font-size: 50px;
+    padding-left:30px;
+    background-color: #c6c5c5;
+    box-shadow: 100px;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-bottom:30px;
+
+
+  }
+
+  img{
+    border: #f2f2f2;
+    border-radius: 30px;
+
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: bolder;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    /* padding: 20px; */
+  }
+  div.box2
+  {
+    padding-left: 100px;
+    padding-top: 50px;
+    
+  }
+  
+  option{
+    font-size: large;
+    font-weight: bold;
+  }
+  div.boxes
+  {
+    display: flex;
+    flex-direction: row;
+
+  }
+  div.box3
+  {
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  h2{
+    padding-left: 20px;
+    font-weight: bolder;
+  }
+</style>
+<h1 >Decision Tree Visualizer </h1>
+<h2>Accuracy: {{ accuracy*100 }}%</h2>
+<div style="display: flex">
+
+<div class=""box1>
+        <form action="/submit" method="post" style=" font-weight:bold;font-size:30px; display:flex;flex-direction:column;padding:20px; ">
+            
+            <label for="criterion">Criterion</label>
+            <select id="criterion"  name="criterion">
+                <option value="gini">Gini</option>
+                <option value="entropy">Entropy</option>
+            </select>
+            
+            <label for="splitter">Splitter</label>
+    <select id="splitter" name="splitter">
+        <option value="best">Best</option>
+        <option value="random">Random</option>
+    </select>
+    
+    <label for="max_depth">Max Depth</label>
+    <input type="text" id="max_depth" name="max_depth" >
+    
+    <label for="min_samples_split">Minimum Samples Split</label>
+    <input type="text" id="min_samples_split" name="min_samples_split">
+    
+    <label for="min_samples_leaf">Minimum Samples Leaf</label>
+    <input type="text" id="min_samples_leaf" name="min_samples_leaf" placeholder="0">
+    
+    <label for="max_features">Max Features</label>
+    <select id="max_features" name="max_features">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <!-- <option value="log2"></option> -->
+    </select>
+    
+    <label for="max_leaf_nodes">Maximum Leaf Nodes</label>
+    <input type="text" id="max_leaf_nodes" name="max_leaf_nodes" placeholder="0">
+    
+    <label for="min_impurity_decrease">Minimum Impurity Decrease</label>
+    <input type="text" id="min_impurity_decrease" name="min_impurity_decrease" placeholder="0.0">
+    
+    
+    <input type="submit" value="Run Algorithm">
+   
+    
+</form>
+</div>
+<div class="boxes">
+<div class="box2">
+    <img src="{{ plot_path }}" width="500">
+  
+
+</div>
+
+    
+        
+<div class="box3">
+    <img src="{{ plot_path1 }}" width="500">
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
